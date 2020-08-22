@@ -52,7 +52,9 @@ function create() {
   }
 
   center = new Phaser.Geom.Point(this.cameras.main.centerX, this.cameras.main.centerY);
-  debug_txt = this.add.text(10, 10, 'hello there');
+  debug_txt = this.add.text(10, 10, 'hello there', {
+    color: '#ddd'
+  });
   this.input.on('pointermove', function (pointer) {
     center.setTo(pointer.x, pointer.y);
   });
